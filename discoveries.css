@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: monospace;
+  overflow-x: hidden;
+}
+
+.startpage {
+  height: 15vh;
+  width: 100%;
+  background-image: url("images/spacepic.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font: bold 12px monospace;
+  position: relative;
+  z-index: 2;
+}
+
+.startpage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navbar {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font: bold 12px monospace;
+  position: relative;
+  z-index: 3;
+}
+
+.logo {
+  height: 10vh;
+  margin: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.logo:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+.navsubdiv {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navsubdiv p,
+.logo {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navsubdiv p:hover,
+.logo:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdowntoggle {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdowntoggle:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.dropdowntoggle i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdowntoggle i {
+  transform: rotate(180deg);
+}
+
+.dropdownmenu {
+    color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.341);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  min-width: 150px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdownmenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownmenu a {
+  display: block;
+  color: rgb(132, 132, 132);
+  text-decoration: none;
+  padding: 12px 20px;
+  font-family: monospace;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.dropdownmenu a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.navsubdiv a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navsubdiv a p {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navsubdiv a p:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.discoverystart {
+  height: 40vh;
+  background: linear-gradient(0deg, #000000 0%, #004e92 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.discoverystart h1 {
+  font-size: 4rem;
+  font-family: monospace;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.discoverystart p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-family: monospace;
+}
+
+.discoveriessection {
+  background-color: black;
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.discoveriesgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.discoverycard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  font-family: monospace;
+  transition: all 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.discoverycard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: all 0.4s ease;
+}
+
+.breakthrough::before {
+  background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+}
+
+.revolutionary::before {
+  background: linear-gradient(90deg, #4ECDC4, #44A08D);
+}
+
+.mindblowing::before {
+  background: linear-gradient(90deg, #A8EDEA, #FED6E3);
+}
+
+.discoverycard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.discoverycard:hover::before {
+  height: 100%;
+  opacity: 0.1;
+}
+
+.discoveryicon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.breakthrough .discoveryicon {
+  color: #FF6B6B;
+}
+
+.revolutionary .discoveryicon {
+  color: #4ECDC4;
+}
+
+.mindblowing .discoveryicon {
+  color: #A8EDEA;
+}
+
+.discoverycard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.discoveryyear {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #87CEEB;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+.discoverycard p {
+  line-height: 1.6;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.mysterysection {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+
+.mysterysection h2 {
+  font-size: 3rem;
+  font-family: monospace;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 3rem;
+}
+
+.mysteriescontainer {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mysteryitem {
+  text-align: center;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.mysteryitem:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.mysterynumber {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #667eea, #0f0f23);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.mysteryitem h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #87CEEB;
+}
+
+.mysteryitem p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.footerbar {
+  background: linear-gradient(0deg, #000000 0%, #16213e 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font: bold 10px monospace;
+  color: white;
+  height: 20vh;
+  width: 100%;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+.socials i {
+  font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+  .navsubdiv {
+    width: 50vw;
+  }
+
+  .discoveriesgrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+  }
+
+  .mysteriescontainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .discoverystart h1 {
+    font-size: 2.5rem;
+  }
+
+  .discoveriesgrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .navsubdiv {
+    width: 60vw;
+    font-size: 16px;
+  }
+
+  .dropdownmenu {
+    left: -50px;
+    min-width: 120px;
+  }
+
+  .mysteriescontainer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .mysterysection h2 {
+    font-size: 2rem;
+  }
+}

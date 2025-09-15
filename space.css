@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.startpage {
+  height: 100vh;
+  width: 100%;
+  background-image: url("images/spacepic.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font: bold 12px monospace;
+}
+
+.navbar {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 10vh;
+  margin: 1.2rem;
+}
+
+.navsubdiv {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navsubdiv p,
+.logo {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navsubdiv p:hover,
+.logo:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-toggle:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgb(255, 255, 255);
+}
+
+.dropdown-toggle i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.272);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  min-width: 150px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  color: rgb(132, 132, 132);
+  text-decoration: none;
+  padding: 12px 20px;
+  font-family: monospace;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.dropdown-menu a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.navsubdiv a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navsubdiv a p {
+  color: rgb(132, 132, 132);
+  transition: all 0.2s ease-in;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navsubdiv a p:hover {
+  color: white;
+  text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.infodiv {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85vh;
+}
+
+.infodiv img {
+  height: 70vh;
+}
+
+.infodiv p {
+  margin: 10rem;
+  width: 50%;
+  line-height: 1.6;
+}
+
+.infodiv button {
+  align-self: center;
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  font-family: monospace;
+  font-weight: bold;
+  width: 10%;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.infodiv button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.5);
+  background-color: #f0f0f0;
+}
+
+.planetsdiv {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+}
+
+.planetsdiv::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url("images/solarsystem.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.planetsdiv h1,
+.planetsdiv p,
+.planetsdiv * {
+  position: relative;
+  z-index: 1;
+}
+
+.planetcard {
+  height: 55vh;
+  width: 20vw;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  font-family: monospace;
+  padding: 2rem 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.planetcard:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.planetcard img {
+  height: 22vh;
+  width: auto;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+.planetcard:hover img {
+  transform: rotate(360deg) scale(1.1);
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+}
+
+.planetcard h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+}
+
+.planetcard p {
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0.8;
+  margin-top: auto;
+}
+
+.planetcard:hover p {
+  opacity: 1;
+}
+
+.planet-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.planet-link:hover {
+  text-decoration: none;
+}
+
+.footerbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font: bold 10px monospace;
+  color: white;
+  height: 20vh;
+  width: 100%;
+  background-color: black;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+.socials i {
+  font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+  .planetsdiv {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .planetcard {
+    width: 45%;
+    margin: 1rem;
+    height: 50vh;
+  }
+  
+  .navsubdiv {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .flexinfo {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .infodiv p {
+    margin: 2rem;
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .infodiv img {
+    height: 50vh;
+    margin-bottom: 2rem;
+  }
+
+  .infodiv button {
+    width: 30%;
+    margin-top: 2rem;
+  }
+
+  .navsubdiv {
+    width: 60vw;
+    font-size: 16px;
+  }
+  
+  .planetsdiv {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .planetcard {
+    width: 80%;
+    height: 45vh;
+    margin: 1rem 0;
+  }
+  
+  .planetcard img {
+    height: 18vh;
+  }
+  
+  .dropdown-menu {
+    left: -50px;
+    min-width: 120px;
+  }
+}
