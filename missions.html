@@ -15,7 +15,7 @@
                     <img class="logo" src="images/logo.png" alt="Home">
                 </a>
             </div>
-            <div class="navsubdiv">
+            <div class="navsubdiv desktopnav">
                 <a href="planets.html"><p>Planets</p></a>
                 
                 <div class="dropdown">
@@ -30,8 +30,54 @@
                 
                 <a href="contact.html"><p>Contact Us</p></a>
             </div>
+            
+            <div class="mobilemenubtn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
+
+    <div class="mobilesidebar">
+        <div class="sidebarheader">
+            <img class="sidebarlogo" src="images/logo.png" alt="Home">
+            <div class="closebtn">
+                <i class="fas fatimes"></i>
+            </div>
+        </div>
+        <div class="sidebarcontent">
+            <a href="index.html" class="sidebarlink">
+                <i class="fas fahome"></i>
+                <span>Home</span>
+            </a>
+            <a href="planets.html" class="sidebarlink">
+                <i class="fas faglobe"></i>
+                <span>Planets</span>
+            </a>
+            <div class="sidebardropdown">
+                <div class="sidebardropdowntoggle">
+                    <i class="fas farocket"></i>
+                    <span>Explore</span>
+                    <i class="fas fa-chevron-down dropdownarrow"></i>
+                </div>
+                <div class="sidebardropdownmenu">
+                    <a href="missions.html" class="sidebarsublink">
+                        <i class="fas faspaceshuttle"></i>
+                        <span>Missions</span>
+                    </a>
+                    <a href="discoveries.html" class="sidebarsublink">
+                        <i class="fas fasearch"></i>
+                        <span>Discoveries</span>
+                    </a>
+                </div>
+            </div>
+            <a href="contact.html" class="sidebarlink">
+                <i class="fas faenvelope"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebaroverlay"></div>
 
     <section class="missionsstart">
         <div>
@@ -42,172 +88,169 @@
 
     <section class="missionssection">
         <div class="missionsgrid">
-            <!-- Historic Missions -->
             <div class="missioncard historic">
-                <div class="mission-header">
-                    <img src="images\edu_srch_celebrate_the_50th_anniversary_apollo11.webp" alt="Apollo 11">
-                    <div class="mission-badge">ISTORIJSKA</div>
+                <div class="missionheader">
+                    <img src="images/edu_srch_celebrate_the_50th_anniversary_apollo11.webp" alt="Apollo 11">
+                    <div class="missionbadge">ISTORIJSKA</div>
                 </div>
                 <h2>Apollo 11</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 16-24 jul 1969</p>
                     <p><strong>Agencija:</strong> NASA</p>
                     <p><strong>Posada:</strong> Armstrong, Aldrin, Collins</p>
                     <p><strong>Status:</strong> Završena uspešno</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Prva misija koja je dovela ljude na Mesec. Neil Armstrong i Buzz Aldrin su hodali po mesečevoj površini dok je Michael Collins orbitirao oko Meseca.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Prvi korak na Mesec</span>
                     <span class="achievement">Mesečevi uzorci</span>
                 </div>
             </div>
 
             <div class="missioncard historic">
-                <div class="mission-header">
-                    <img src="images\voyager.jpeg" alt="Voyager">
-                    <div class="mission-badge">ISTORIJSKA</div>
+                <div class="missionheader">
+                    <img src="images/voyager.jpeg" alt="Voyager">
+                    <div class="missionbadge">ISTORIJSKA</div>
                 </div>
                 <h2>Voyager 1 & 2</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 1977 - danas</p>
                     <p><strong>Agencija:</strong> NASA</p>
                     <p><strong>Tip:</strong> Automatska sonda</p>
                     <p><strong>Status:</strong> Aktivna</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Najduža misija istraživanja spoljašnjih planeta. Voyager 1 je prvi ljudski objekat koji je napustio Sunčev sistem.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Izašao iz Sunčevog sistema</span>
                     <span class="achievement">Jupiter i Saturn flyby</span>
                 </div>
             </div>
 
-            <!-- Current Missions -->
             <div class="missioncard current">
-                <div class="mission-header">
-                    <img src="images\Mars-Perseverence-Rover1-2048x771.jpg" alt="Perseverance">
-                    <div class="mission-badge">AKTIVNA</div>
+                <div class="missionheader">
+                    <img src="images/Mars-Perseverence-Rover1-2048x771.jpg" alt="Perseverance">
+                    <div class="missionbadge">AKTIVNA</div>
                 </div>
                 <h2>Mars Perseverance</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 2020 - danas</p>
                     <p><strong>Agencija:</strong> NASA</p>
                     <p><strong>Lokacija:</strong> Mars (Jezero krater)</p>
                     <p><strong>Status:</strong> Aktivna</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Najnapredniji rover na Marsu koji traži znakove drevnog života i priprema uzorke za buduće misije povratka na Zemlju.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Proizvodnja kiseonika</span>
                     <span class="achievement">Helikopter Ingenuity</span>
                 </div>
             </div>
 
             <div class="missioncard current">
-                <div class="mission-header">
-                    <img src="images\jameswebbspace.jpg" alt="James Webb">
-                    <div class="mission-badge">AKTIVNA</div>
+                <div class="missionheader">
+                    <img src="images/jameswebbspace.jpg" alt="James Webb">
+                    <div class="missionbadge">AKTIVNA</div>
                 </div>
                 <h2>James Webb Space Telescope</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 2021 - danas</p>
                     <p><strong>Agencija:</strong> NASA/ESA/CSA</p>
                     <p><strong>Lokacija:</strong> L2 Lagrange punkt</p>
                     <p><strong>Status:</strong> Operativna</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Najmoćniji svemirski teleskop ikad napravljen, dizajniran da posmatra najranije galaksije i formiranje zvezda.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Infrared imaging</span>
                     <span class="achievement">Najdublji svemir</span>
                 </div>
             </div>
 
-            <!-- Future Missions -->
             <div class="missioncard future">
-                <div class="mission-header">
-                    <img src="images\artemis.webp" alt="Artemis">
-                    <div class="mission-badge">BUDUĆA</div>
+                <div class="missionheader">
+                    <img src="images/artemis.webp" alt="Artemis">
+                    <div class="missionbadge">BUDUĆA</div>
                 </div>
                 <h2>Artemis Program</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 2024 - 2030+</p>
                     <p><strong>Agencija:</strong> NASA</p>
                     <p><strong>Cilj:</strong> Povratak na Mesec</p>
                     <p><strong>Status:</strong> U pripremi</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Ambiciozan program za vraćanje astronauta na Mesec, uključujući prvu ženu i osobu od boje koja će hodati po mesečevoj površini.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Mesečeva baza</span>
                     <span class="achievement">Održiva prisutnost</span>
                 </div>
             </div>
 
             <div class="missioncard future">
-                <div class="mission-header">
-                    <img src="images\Mars Sample Return.jpg" alt="Mars Sample Return">
-                    <div class="mission-badge">BUDUĆA</div>
+                <div class="missionheader">
+                    <img src="images/Mars Sample Return.jpg" alt="Mars Sample Return">
+                    <div class="missionbadge">BUDUĆA</div>
                 </div>
                 <h2>Mars Sample Return</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 2028 - 2033</p>
                     <p><strong>Agencija:</strong> NASA/ESA</p>
                     <p><strong>Cilj:</strong> Povratak uzoraka sa Marsa</p>
                     <p><strong>Status:</strong> Razvoj</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Kompleksna misija koja će pokupiti uzorke koje je sakupio Perseverance rover i doneti ih na Zemlju za detaljnu analizu.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Prvi uzorci sa Marsa</span>
                     <span class="achievement">Međuplanetarni povratak</span>
                 </div>
             </div>
 
             <div class="missioncard current">
-                <div class="mission-header">
-                    <img src="images\Spacestation.jpg" alt="ISS">
-                    <div class="mission-badge">AKTIVNA</div>
+                <div class="missionheader">
+                    <img src="images/Spacestation.jpg" alt="ISS">
+                    <div class="missionbadge">AKTIVNA</div>
                 </div>
                 <h2>International Space Station</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 1998 - 2031</p>
                     <p><strong>Agencije:</strong> NASA, Roscosmos, ESA, JAXA, CSA</p>
                     <p><strong>Lokacija:</strong> Niska Zemljina orbita</p>
                     <p><strong>Status:</strong> Operativna</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Najveći međunarodni kooperativni projekt u svemiru, laboratorija koja kontinuirano radi u orbiti već preko 20 godina.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Mikrogravitationa istraživanja</span>
                     <span class="achievement">Međunarodna saradnja</span>
                 </div>
             </div>
 
             <div class="missioncard future">
-                <div class="mission-header">
-                    <img src="images\europa-clipper-19c754.webp" alt="Europa Clipper">
-                    <div class="mission-badge">BUDUĆA</div>
+                <div class="missionheader">
+                    <img src="images/europa-clipper-19c754.webp" alt="Europa Clipper">
+                    <div class="missionbadge">BUDUĆA</div>
                 </div>
                 <h2>Europa Clipper</h2>
-                <div class="mission-info">
+                <div class="missioninfo">
                     <p><strong>Datum:</strong> 2024 - 2034</p>
                     <p><strong>Agencija:</strong> NASA</p>
                     <p><strong>Cilj:</strong> Jupiterov mesec Europa</p>
                     <p><strong>Status:</strong> Lansirana</p>
                 </div>
-                <div class="mission-description">
+                <div class="missiondescription">
                     Misija za istraživanje Evrope, Jupiterovog meseca koji možda sakriva okean tečne vode ispod ledene površine.
                 </div>
-                <div class="mission-achievements">
+                <div class="missionachievements">
                     <span class="achievement">Potraga za životom</span>
                     <span class="achievement">Okean ispod leda</span>
                 </div>
@@ -215,47 +258,47 @@
         </div>
     </section>
 
-    <section class="timeline-section">
+    <section class="timelinesection">
         <h2>Istorija svemirskih misija</h2>
         <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">1957</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">1957</div>
+                <div class="timelinecontent">
                     <h3>Sputnik 1</h3>
                     <p>Prvi veštački satelit u orbiti</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">1961</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">1961</div>
+                <div class="timelinecontent">
                     <h3>Vostok 1</h3>
                     <p>Jurij Gagarin - prvi čovek u svemiru</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">1969</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">1969</div>
+                <div class="timelinecontent">
                     <h3>Apollo 11</h3>
                     <p>Prvi ljudi na Mesecu</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">1977</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">1977</div>
+                <div class="timelinecontent">
                     <h3>Voyager</h3>
                     <p>Istraživanje spoljašnjih planeta</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">1998</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">1998</div>
+                <div class="timelinecontent">
                     <h3>ISS</h3>
                     <p>Početak izgradnje svemirske stanice</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
+            <div class="timelineitem">
+                <div class="timelinedate">2021</div>
+                <div class="timelinecontent">
                     <h3>James Webb</h3>
                     <p>Lansiranje najmoćnijeg teleskopa</p>
                 </div>
@@ -265,17 +308,18 @@
 
     <footer class="footerbar">
         <div class="socials">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fafacebookf"></i></a>
+            <a href=""><i class="fab fatwitter"></i></a>
+            <a href=""><i class="fab fainstagram"></i></a>
+            <a href=""><i class="fab falinkedinin"></i></a>
+            <a href=""><i class="fab fayoutube"></i></a>
+            <a href=""><i class="fab fagithub"></i></a>
         </div>
         <h1>
             Napravljeno za projektni zadatak <br>
             2025 ©
         </h1>
     </footer>
+    <script src="./sidebar.js"></script>
 </body>
 </html>

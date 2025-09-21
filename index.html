@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./space.css" />
@@ -8,95 +9,141 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <title>Welcome To Space</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="startpage">
-      <nav class="navbar">
-        <div>
-          <a href="space.html"><img class="logo" src="images/logo.png" alt="" /></a>
-        </div>
-        <div class="navsubdiv">
-          <a href="planets.html"><p>Planets</p></a>
-          <div class="dropdown">
-            <p class="dropdown-toggle">Explore  <i class="fas fa-chevron-down"></i>
-            </p>
-            <div class="dropdown-menu">
-              <a href="missions.html">Missions</a>
-              <a href="discoveries.html">Discoveries</a>
+        <nav class="navbar">
+            <div>
+                <a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
             </div>
-          </div>
-          <p>Contact Us</p>
+            
+            <div class="mobilemenubtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="navsubdiv desktopnav">
+                <a href="planets.html"><p>Planets</p></a>
+                <div class="dropdown">
+                    <p class="dropdowntoggle">Explore <i class="fas fa-chevron-down"></i></p>
+                    <div class="dropdownmenu">
+                        <a href="missions.html">Missions</a>
+                        <a href="discoveries.html">Discoveries</a>
+                    </div>
+                </div>
+                <a href="contact.html"><p>Contact Us</p></a>
+            </div>
+        </nav>
+        
+        <div class="mobilesidebar">
+            <div class="sidebarheader">
+                <img class="sidebarlogo" src="images/logo.png" alt="Logo" />
+                <div class="closebtn">
+                    <i class="fas fatimes"></i>
+                </div>
+            </div>
+            <div class="sidebarcontent">
+                <a href="planets.html" class="sidebarlink">
+                    <i class="fas faglobe"></i>
+                    <span>Planets</span>
+                </a>
+                <div class="sidebardropdown">
+                    <div class="sidebardropdowntoggle">
+                        <i class="fas farocket"></i>
+                        <span>Explore</span>
+                        <i class="fas fa-chevron-down dropdownarrow"></i>
+                    </div>
+                    <div class="sidebardropdownmenu">
+                        <a href="missions.html" class="sidebarsublink">
+                            <i class="fas fasatellite"></i>
+                            <span>Missions</span>
+                        </a>
+                        <a href="discoveries.html" class="sidebarsublink">
+                            <i class="fas fastar"></i>
+                            <span>Discoveries</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html" class="sidebarlink">
+                    <i class="fas faenvelope"></i>
+                    <span>Contact Us</span>
+                </a>
+            </div>
         </div>
-      </nav>
+        
+        <div class="sidebaroverlay"></div>
     </div>
+    
     <div class="infodiv">
-      <div class="flexinfo">
-        <img src="images/astronaut-Photoroom.png" alt="" />
-        <p>
-          Čovečanstvo je oduvek podizalo pogled ka noćnom nebu i pitalo se šta
-          se krije iza beskraja. Zvezde koje sijaju na horizontu nisu samo
-          daleki svetovi one su podsetnik da naša sudbina nije ograničena
-          Zemljom. Istraživanje svemira nije samo naučni poduhvat. <br />
-          To je dokaz naše radoznalosti, naše hrabrosti i naše želje da
-          otkrijemo nepoznato. Od prvog satelita, preko sletanja na Mesec, do
-          današnjih misija na Mars, svaki korak pokazuje da granice postoje samo
-          dok ne odlučimo da ih prevaziđemo. Naša budućnost je među zvezdama.
-          Svaki teleskop, svaka raketa i svaka misija deo su iste priče priče o
-          ljudskom duhu koji odbija da ostane zatvoren u granicama poznatog. Put
-          u beskonačnost je tek počeo. I ovaj put pripada svima nama. <br />
-          <br />
-          <b
-            >“The Earth is the cradle of humanity, but one cannot remain in the
-            cradle forever.” – Konstantin Tsiolkovski</b
-          >
-        </p>
-      </div>
-      <button>Saznaj više</button>
+        <div class="flexinfo">
+            <img src="images/astronaut-Photoroom.png" alt="" />
+            <p>
+                Čovečanstvo je oduvek podizalo pogled ka noćnom nebu i pitalo se šta
+                se krije iza beskraja. Zvezde koje sijaju na horizontu nisu samo
+                daleki svetovi one su podsetnik da naša sudbina nije ograničena
+                Zemljom. Istraživanje svemira nije samo naučni poduhvat. <br />
+                To je dokaz naše radoznalosti, naše hrabrosti i naše želje da
+                otkrijemo nepoznato. Od prvog satelita, preko sletanja na Mesec, do
+                današnjih misija na Mars, svaki korak pokazuje da granice postoje samo
+                dok ne odlučimo da ih prevaziđemo. Naša budućnost je među zvezdama.
+                Svaki teleskop, svaka raketa i svaka misija deo su iste priče priče o
+                ljudskom duhu koji odbija da ostane zatvoren u granicama poznatog. Put
+                u beskonačnost je tek počeo. I ovaj put pripada svima nama. <br />
+                <br />
+                <b
+                    >"The Earth is the cradle of humanity, but one cannot remain in the
+                    cradle forever." – Konstantin Tsiolkovski</b
+                >
+            </p>
+        </div>
+        <button>Saznaj više</button>
     </div>
+    
     <div class="planetsdiv">
-      <div class="planetcard">
-        <img src="images\earth-2768.gif" alt="" />
-        <h1>Zemlja</h1>
-        <p>Precnik: ~12.742 km <br />71% voda, 29% kopno</p>
-      </div>
-      <div class="planetcard">
-        <img src="images\Spinning_Sun.gif" alt="" />
-        <h1>Sunce</h1>
-        <p>
-          Prečnik: ~1.392.000 km <br />Sunce je staro oko 4,6 milijardi godina i
-          nalazi se na sredini svog životnog veka
-        </p>
-      </div>
-      <div class="planetcard">
-        <img src="images\Spinning_Mars.gif" alt="" />
-        <h1>Mars</h1>
-        <p>
-          Prečnik: ~6.779 km <br />Mars ima najveći vulkan u Sunčevom sistemu –
-          Olimp Mons
-        </p>
-      </div>
-      <div class="planetcard">
-        <img src="images\Neptune.gif" alt="" />
-        <h1>Neptun</h1>
-        <p>
-          Prečnik: ~49.244 km <br />Godina na Neptunu traje oko 165 Zemljinih
-          godina
-        </p>
-      </div>
+        <div class="planetcard">
+            <img src="images\earth-2768.gif" alt="" />
+            <h1>Zemlja</h1>
+            <p>Precnik: ~12.742 km <br />71% voda, 29% kopno</p>
+        </div>
+        <div class="planetcard">
+            <img src="images\Spinning_Sun.gif" alt="" />
+            <h1>Sunce</h1>
+            <p>
+                Prečnik: ~1.392.000 km <br />Sunce je staro oko 4,6 milijardi godina i
+                nalazi se na sredini svog životnog veka
+            </p>
+        </div>
+        <div class="planetcard">
+            <img src="images\Spinning_Mars.gif" alt="" />
+            <h1>Mars</h1>
+            <p>
+                Prečnik: ~6.779 km <br />Mars ima najveći vulkan u Sunčevom sistemu –
+                Olimp Mons
+            </p>
+        </div>
+        <div class="planetcard">
+            <img src="images\Neptune.gif" alt="" />
+            <h1>Neptun</h1>
+            <p>
+                Prečnik: ~49.244 km <br />Godina na Neptunu traje oko 165 Zemljinih
+                godina
+            </p>
+        </div>
     </div>
+    
     <footer class="footerbar">
-      <div class="socials">
-        <a href=""><i class="fab fa-facebook-f"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-linkedin-in"></i></a>
-        <a href=""><i class="fab fa-youtube"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-      </div>
-      <h1>
-        Napravljeno za projektni zadatak <br />
-        2025 ©
-      </h1>
-    </footer>
-  </body>
+        <div class="socials">
+            <a href=""><i class="fab fafacebookf"></i></a>
+            <a href=""><i class="fab fatwitter"></i></a>
+            <a href=""><i class="fab fainstagram"></i></a>
+            <a href=""><i class="fab falinkedinin"></i></a>
+            <a href=""><i class="fab fayoutube"></i></a>
+            <a href=""><i class="fab fagithub"></i></a>
+        </div>
+        <h1>
+            Napravljeno za projektni zadatak <br />
+            2025 ©
+        </h1>
+    </footer>    
+    <script src="./sidebar.js"></script>
+</body>
 </html>

@@ -15,7 +15,7 @@
                     <img class="logo" src="images/logo.png" alt="Home">
                 </a>
             </div>
-            <div class="navsubdiv">
+            <div class="navsubdiv desktopnav">
                 <a href="planets.html"><p>Planets</p></a>
                 
                 <div class="dropdown">
@@ -30,8 +30,55 @@
                 
                 <a href="contact.html"><p>Contact Us</p></a>
             </div>
+            
+            <div class="mobilemenubtn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
+
+    
+    <div class="mobilesidebar">
+        <div class="sidebarheader">
+            <img class="sidebarlogo" src="images/logo.png" alt="Home">
+            <div class="closebtn">
+                <i class="fas fatimes"></i>
+            </div>
+        </div>
+        <div class="sidebarcontent">
+            <a href="index.html" class="sidebarlink">
+                <i class="fas fahome"></i>
+                <span>Home</span>
+            </a>
+            <a href="planets.html" class="sidebarlink">
+                <i class="fas faglobe"></i>
+                <span>Planets</span>
+            </a>
+            <div class="sidebardropdown">
+                <div class="sidebardropdowntoggle">
+                    <i class="fas farocket"></i>
+                    <span>Explore</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="sidebardropdownmenu">
+                    <a href="missions.html" class="sidebarsublink">
+                        <i class="fas faspaceshuttle"></i>
+                        <span>Missions</span>
+                    </a>
+                    <a href="discoveries.html" class="sidebarsublink">
+                        <i class="fas fasearch"></i>
+                        <span>Discoveries</span>
+                    </a>
+                </div>
+            </div>
+            <a href="contact.html" class="sidebarlink">
+                <i class="fas faenvelope"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebaroverlay"></div>
 
     <section class="discoverystart">
         <div>
@@ -45,7 +92,7 @@
             
             <div class="discoverycard breakthrough">
                 <div class="discoveryicon">
-                    <i class="fas fa-dna"></i>
+                    <i class="fas fadna"></i>
                 </div>
                 <h2>Organske molekule na Marsu</h2>
                 <div class="discoveryyear">2018</div>
@@ -54,7 +101,7 @@
 
             <div class="discoverycard revolutionary">
                 <div class="discoveryicon">
-                    <i class="fas fa-tint"></i>
+                    <i class="fas fatint"></i>
                 </div>
                 <h2>Tečna voda na Europu</h2>
                 <div class="discoveryyear">2013</div>
@@ -63,7 +110,7 @@
 
             <div class="discoverycard mindblowing">
                 <div class="discoveryicon">
-                    <i class="fas fa-circle"></i>
+                    <i class="fas facircle"></i>
                 </div>
                 <h2>Prva fotografija crne rupe</h2>
                 <div class="discoveryyear">2019</div>
@@ -72,7 +119,7 @@
 
             <div class="discoverycard breakthrough">
                 <div class="discoveryicon">
-                    <i class="fas fa-wave-square"></i>
+                    <i class="fas fawavesquare"></i>
                 </div>
                 <h2>Gravitacioni talasi</h2>
                 <div class="discoveryyear">2015</div>
@@ -81,18 +128,18 @@
 
             <div class="discoverycard revolutionary">
                 <div class="discoveryicon">
-                    <i class="fas fa-globe-americas"></i>
+                    <i class="fas faglobeamericas"></i>
                 </div>
-                <h2>Kepler452b "Zemlja 2.0"</h2>
+                <h2>Kepler-452b "Zemlja 2.0"</h2>
                 <div class="discoveryyear">2015</div>
                 <p>Kepler teleskop je otkrio planetu sličnu Zemlji u zoni pogodnoj za život, orbitira oko zvezde slične Suncu na udaljenosti od 1,400 svetlosnih godina.</p>
             </div>
 
             <div class="discoverycard mindblowing">
                 <div class="discoveryicon">
-                    <i class="fas fa-meteor"></i>
+                    <i class="fas fameteor"></i>
                 </div>
-                <h2>'Oumuamua  međuzvezdani objekat</h2>
+                <h2>'Oumuamua - međuzvezdani objekat</h2>
                 <div class="discoveryyear">2017</div>
                 <p>Prvi potvrđeni međuzvezdani objekat koji je prošao kroz naš sunčev sistem, sa neobičnim oblikom i ubrzanjem koje i dalje zbunjuje naučnike.</p>
             </div>
@@ -123,17 +170,18 @@
 
     <footer class="footerbar">
         <div class="socials">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fafacebookf"></i></a>
+            <a href=""><i class="fab fatwitter"></i></a>
+            <a href=""><i class="fab fainstagram"></i></a>
+            <a href=""><i class="fab falinkedinin"></i></a>
+            <a href=""><i class="fab fayoutube"></i></a>
+            <a href=""><i class="fab fagithub"></i></a>
         </div>
         <h1>
             Napravljeno za projektni zadatak <br>
             2025 ©
         </h1>
     </footer>
+    <script src="./sidebar.js"></script>
 </body>
 </html>

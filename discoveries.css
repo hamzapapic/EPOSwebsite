@@ -117,7 +117,6 @@ body {
   top: 100%;
   left: 0;
   background: rgba(0, 0, 0, 0.341);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   min-width: 150px;
@@ -171,6 +170,178 @@ body {
   text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
 }
 
+.mobilemenubtn {
+    display: none;
+    color: rgb(132, 132, 132);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    align-self: center;
+}
+
+.mobilemenubtn:hover {
+    color: white;
+    text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.mobilesidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobilesidebar.active {
+    right: 0;
+}
+
+.sidebaroverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebaroverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebarheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarlogo {
+    height: 50px;
+}
+
+.closebtn {
+    color: rgb(132, 132, 132);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.sidebarcontent {
+    padding: 1rem 0;
+}
+
+.sidebarlink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: rgb(132, 132, 132);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.sidebarlink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebarlink i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebardropdown {
+    position: relative;
+}
+
+.sidebardropdowntoggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: rgb(132, 132, 132);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.sidebardropdowntoggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebardropdowntoggle i:first-child {
+    width: 20px;
+    text-align: center;
+}
+
+.dropdownarrow {
+    margin-left: auto ;
+    width: auto ;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdownarrow.rotated {
+    transform: rotate(180deg);
+}
+
+.sidebardropdownmenu {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    transition: max-height 0.3s ease;
+}
+
+.sidebardropdownmenu.active {
+    max-height: 200px;
+}
+
+.sidebarsublink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem 0.8rem 3rem;
+    color: rgba(132, 132, 132, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.sidebarsublink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebarsublink i {
+    width: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 .discoverystart {
   height: 40vh;
   background: linear-gradient(0deg, #000000 0%, #004e92 80%);
@@ -213,7 +384,6 @@ body {
 
 .discoverycard {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
@@ -399,6 +569,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .mobilemenubtn {
+    display: block;
+  }
+  
+  .desktopnav {
+    display: none;
+  }
+
   .discoverystart h1 {
     font-size: 2.5rem;
   }
@@ -425,5 +603,15 @@ body {
 
   .mysterysection h2 {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobilesidebar {
+    display: none;
+  }
+  
+  .sidebaroverlay {
+    display: none;
   }
 }

@@ -15,7 +15,7 @@
                     <img class="logo" src="images/logo.png" alt="Home">
                 </a>
             </div>
-            <div class="navsubdiv">
+            <div class="navsubdiv desktopnav">
                 <a href="planets.html"><p>Planets</p></a>
                 
                 <div class="dropdown">
@@ -30,8 +30,54 @@
                 
                 <a href="contact.html"><p>Contact Us</p></a>
             </div>
+            
+            <div class="mobilemenubtn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
+
+    <div class="mobilesidebar">
+        <div class="sidebarheader">
+            <img class="sidebarlogo" src="images/logo.png" alt="Home">
+            <div class="closebtn">
+                <i class="fas fatimes"></i>
+            </div>
+        </div>
+        <div class="sidebarcontent">
+            <a href="index.html" class="sidebarlink">
+                <i class="fas fahome"></i>
+                <span>Home</span>
+            </a>
+            <a href="planets.html" class="sidebarlink">
+                <i class="fas faglobe"></i>
+                <span>Planets</span>
+            </a>
+            <div class="sidebardropdown">
+                <div class="sidebardropdowntoggle">
+                    <i class="fas farocket"></i>
+                    <span>Explore</span>
+                    <i class="fas fa-chevron-down dropdownarrow"></i>
+                </div>
+                <div class="sidebardropdownmenu">
+                    <a href="missions.html" class="sidebarsublink">
+                        <i class="fas faspaceshuttle"></i>
+                        <span>Missions</span>
+                    </a>
+                    <a href="discoveries.html" class="sidebarsublink">
+                        <i class="fas fasearch"></i>
+                        <span>Discoveries</span>
+                    </a>
+                </div>
+            </div>
+            <a href="contact.html" class="sidebarlink">
+                <i class="fas faenvelope"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebaroverlay"></div>
 
     <section class="contacthero">
         <div class="herocontent">
@@ -45,7 +91,7 @@
             <div class="contactinfo">
                 <h2>Informacije</h2>
                 <div class="contactitem">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas faenvelope"></i>
                     <div>
                         <h3>Email</h3>
                         <p>space@discoveries.com</p>
@@ -53,15 +99,15 @@
                 </div>
                 
                 <div class="contactitem">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas faphone"></i>
                     <div>
                         <h3>Telefon</h3>
-                        <p>+381 11 123 4567</p>
+                        <p>+381 123 4 567</p>
                     </div>
                 </div>
                 
                 <div class="contactitem">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas famapmarkeralt"></i>
                     <div>
                         <h3>Adresa</h3>
                         <p>Bulevar astronauta 123<br>Beograd, Srbija</p>
@@ -93,7 +139,7 @@
                     </div>
                     
                     <button type="submit" class="submitbtn">
-                        <i class="fas fa-paper-plane"></i>
+                        <i class="fas fapaperplane"></i>
                         Pošalji poruku
                     </button>
                 </form>
@@ -103,17 +149,18 @@
 
     <footer class="footerbar">
         <div class="socials">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fafacebookf"></i></a>
+            <a href=""><i class="fab fatwitter"></i></a>
+            <a href=""><i class="fab fainstagram"></i></a>
+            <a href=""><i class="fab falinkedinin"></i></a>
+            <a href=""><i class="fab fayoutube"></i></a>
+            <a href=""><i class="fab fagithub"></i></a>
         </div>
         <h1>
             Napravljeno za projektni zadatak <br>
             2025 ©
         </h1>
     </footer>
+    <script src="./sidebar.js"></script>
 </body>
 </html>

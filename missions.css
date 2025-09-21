@@ -117,7 +117,6 @@ body {
   top: 100%;
   left: 0;
   background: rgba(0, 0, 0, 0.433);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   min-width: 150px;
@@ -171,6 +170,178 @@ body {
   text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
 }
 
+.mobilemenubtn {
+    display: none;
+    color: rgb(132, 132, 132);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    align-self: center;
+}
+
+.mobilemenubtn:hover {
+    color: white;
+    text-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
+
+.mobilesidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobilesidebar.active {
+    right: 0;
+}
+
+.sidebaroverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebaroverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebarheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarlogo {
+    height: 50px;
+}
+
+.closebtn {
+    color: rgb(132, 132, 132);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.sidebarcontent {
+    padding: 1rem 0;
+}
+
+.sidebarlink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: rgb(132, 132, 132);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.sidebarlink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebarlink i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebardropdown {
+    position: relative;
+}
+
+.sidebardropdowntoggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: rgb(132, 132, 132);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.sidebardropdowntoggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebardropdowntoggle i:first-child {
+    width: 20px;
+    text-align: center;
+}
+
+.dropdownarrow {
+    margin-left: auto ;
+    width: auto ;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdownarrow.rotated {
+    transform: rotate(180deg);
+}
+
+.sidebardropdownmenu {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    transition: max-height 0.3s ease;
+}
+
+.sidebardropdownmenu.active {
+    max-height: 200px;
+}
+
+.sidebarsublink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem 0.8rem 3rem;
+    color: rgba(132, 132, 132, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.sidebarsublink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebarsublink i {
+    width: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 .missionsstart {
   height: 40vh;
   background: linear-gradient(0deg, #000000 0%, #004e92 80%);
@@ -213,7 +384,6 @@ body {
 
 .missioncard {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 0;
@@ -231,24 +401,24 @@ body {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
-.mission-header {
+.missionheader {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
 
-.mission-header img {
+.missionheader img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.missioncard:hover .mission-header img {
+.missioncard:hover .missionheader img {
   transform: scale(1.1);
 }
 
-.mission-badge {
+.missionbadge {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -256,21 +426,20 @@ body {
   border-radius: 20px;
   font-size: 11px;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.historic .mission-badge {
+.historic .missionbadge {
   background: linear-gradient(45deg, #8B4513, #CD853F);
   color: white;
 }
 
-.current .mission-badge {
-  background: linear-gradient(45deg, #00FF00, #32CD32);
+.current .missionbadge {
+  background: linear-gradient(275deg, #143e14, #00ff00);
   color: black;
 }
 
-.future .mission-badge {
+.future .missionbadge {
   background: linear-gradient(45deg, #4169E1, #87CEEB);
   color: white;
 }
@@ -282,7 +451,7 @@ body {
   color: #ffffff;
 }
 
-.mission-info {
+.missioninfo {
   margin: 0 1.5rem 1.5rem 1.5rem;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.3);
@@ -290,16 +459,16 @@ body {
   border-left: 4px solid rgba(255, 255, 255, 0.3);
 }
 
-.mission-info p {
+.missioninfo p {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
 
-.mission-info strong {
+.missioninfo strong {
   color: #87CEEB;
 }
 
-.mission-description {
+.missiondescription {
   margin: 0 1.5rem 1.5rem 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -307,7 +476,7 @@ body {
   text-align: justify;
 }
 
-.mission-achievements {
+.missionachievements {
   margin: 0 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -323,14 +492,13 @@ body {
   border: 1px solid rgba(135, 206, 235, 0.3);
 }
 
-/* Timeline Section */
-.timeline-section {
+.timelinesection {
   background: linear-gradient(180deg, #000000 0%, #1a1a2e 50%, #000000 100%);
   padding: 4rem 0;
   color: white;
 }
 
-.timeline-section h2 {
+.timelinesection h2 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 3rem;
@@ -356,21 +524,21 @@ body {
   border-radius: 2px;
 }
 
-.timeline-item {
+.timelineitem {
   display: flex;
   margin-bottom: 3rem;
   position: relative;
 }
 
-.timeline-item:nth-child(odd) {
+.timelineitem:nth-child(odd) {
   justify-content: flex-end;
 }
 
-.timeline-item:nth-child(even) {
+.timelineitem:nth-child(even) {
   justify-content: flex-start;
 }
 
-.timeline-date {
+.timelinedate {
   width: 80px;
   height: 80px;
   background: linear-gradient(45deg, #4169E1, #87CEEB);
@@ -387,37 +555,35 @@ body {
   border: 4px solid #000;
 }
 
-.timeline-content {
+.timelinecontent {
   width: 40%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.217);
   border-radius: 15px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #87cfeb4f;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
+.timelineitem:nth-child(odd) .timelinecontent {
   margin-right: 100px;
   text-align: right;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
+.timelineitem:nth-child(even) .timelinecontent {
   margin-left: 100px;
   text-align: left;
 }
 
-.timeline-content h3 {
+.timelinecontent h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #87CEEB;
 }
 
-.timeline-content p {
+.timelinecontent p {
   opacity: 0.9;
   line-height: 1.6;
 }
 
-/* Footer */
 .footerbar {
   background: linear-gradient(180deg, #000000 0%, #004e92 80%);
   display: flex;
@@ -446,7 +612,6 @@ body {
   font-size: 24px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .navsubdiv {
     width: 50vw;
@@ -457,12 +622,20 @@ body {
     padding: 0 1rem;
   }
 
-  .timeline-content {
+  .timelinecontent {
     width: 45%;
   }
 }
 
 @media (max-width: 768px) {
+  .mobilemenubtn {
+    display: block;
+  }
+  
+  .desktopnav {
+    display: none;
+  }
+
   .missionsstart h1 {
     font-size: 2.5rem;
   }
@@ -486,23 +659,33 @@ body {
     left: 30px;
   }
 
-  .timeline-item {
-    justify-content: flex-start !important;
+  .timelineitem {
+    justify-content: flex-start ;
   }
 
-  .timeline-content {
+  .timelinecontent {
     width: calc(100% - 100px);
-    margin-left: 100px !important;
-    margin-right: 0 !important;
-    text-align: left !important;
+    margin-left: 100px ;
+    margin-right: 0 ;
+    text-align: left ;
   }
 
-  .timeline-date {
+  .timelinedate {
     left: 30px;
     transform: translateX(-50%);
   }
 
-  .timeline-section h2 {
+  .timelinesection h2 {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobilesidebar {
+    display: none;
+  }
+  
+  .sidebaroverlay {
+    display: none;
   }
 }
